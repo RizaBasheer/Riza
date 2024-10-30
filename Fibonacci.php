@@ -12,7 +12,7 @@
     <h1>Fibonacci Series</h1>
         <form method="GET">
             <label>Enter the limit:</label>
-            <input type="number" name="limit">
+            <input type="number" name="limit" required>
             <button type="submit">Show Fibonacci Series</button><br><br>
         </form>
 
@@ -23,11 +23,11 @@
             $f2 = 1;
 
             echo "<p>Fibonacci series up to $limit: </p>";
-            echo "$a, $b";
+            echo "$f1, $f2";
 
-            while($a + $b <= $limit){
-                $f3 = $a + $b;
-                echo ", $f3"
+            while($f1 + $f2 <= $limit){
+                $f3 = $f1 + $f2;
+                echo ", $f3";
                 $f1 = $f2;
                 $f2 = $f3;
             }
