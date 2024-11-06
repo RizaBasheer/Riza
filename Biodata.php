@@ -24,6 +24,7 @@ if ($_POST) {
     echo "<p><strong>Qualifications: </strong> $qualification </p>";
     echo "<p><strong>Experience: </strong> $experience </p>";
     echo "</td></tr></table>";
+    echo "<a href='Form.html'>Go Back</a>";
 } else {
     echo "<p>Please fill out the form first. </p>";
 }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Multiplication Table</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Multiplication Table</h1>
+    
+    <label>Enter a number: </label>
+    <input type="number" id="num" min="1">
+    <button onclick="generateTable()">Generate Table</button>
+
+    <div id="tableContainer"></div> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        function generateTable() {
+            var num = document.getElementById("num").value;
+            
+            if (!num) {
+                alert("Please enter a number.");
+                return;
+            }
+
+            $.ajax({
+                url: "Generate_table.php",
+                type: "GET",
+                data: { num: num },
+                success: function(response) {
+                    document.getElementById("tableContainer").innerHTML = response;
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -12,7 +12,7 @@
     <h1>Fibonacci Series</h1>
         <form method="GET">
             <label>Enter the limit:</label>
-            <input type="number" name="limit" required>
+            <input type="number" name="limit" required><br><br>
             <button type="submit">Show Fibonacci Series</button><br><br>
         </form>
 
