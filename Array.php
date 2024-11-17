@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
+<head>
+     <style>
+      body {
+             text-align: center;
+            }
+        </style>
+    </head>
 <body>
+    
     <h1>Array Operations</h1>
     <form action="" method="post">
         <input type="radio" name="choice" value="display" required> Display Array<br />
@@ -15,7 +23,7 @@
 
     <?php
     if ($_POST) {
-        $names = array("Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Bob", "Mallory", "Trent");
+        $names = array("Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Bob", "Mary", "Trent");
         $val = $_POST['choice'];
         echo "<h2>Result:</h2>";
 
@@ -23,35 +31,35 @@
             case "display":
                 echo "Original Array:<br>";
                 foreach ($names as $name)
-                    echo htmlspecialchars($name) . "<br>";
+                    echo ($name) . "<br>";
                 break;
 
             case "sort":
                 sort($names);
                 echo "Sorted Array:<br>";
                 foreach ($names as $name)
-                    echo htmlspecialchars($name) . "<br>";
+                    echo ($name) . "<br>";
                 break;
 
             case "dupli":
-                $uniqueNames = array_unique($names);
+                $unique = array_unique($names);
                 echo "Array Without Duplicates:<br>";
-                foreach ($uniqueNames as $name)
-                    echo htmlspecialchars($name) . "<br>";
+                foreach ($unique as $name)
+                    echo ($name) . "<br>";
                 break;
 
             case "pop":
                 array_pop($names);
                 echo "Array After Deleting Last Element:<br>";
                 foreach ($names as $name)
-                    echo htmlspecialchars($name) . "<br>";
+                    echo ($name) . "<br>";
                 break;
 
             case "rev":
-                $reversedNames = array_reverse($names);
+                $reversed = array_reverse($names);
                 echo "Array in Reverse Order:<br>";
-                foreach ($reversedNames as $name)
-                    echo htmlspecialchars($name) . "<br>";
+                foreach ($reversed as $name)
+                    echo ($name) . "<br>";
                 break;
 
             case "search":

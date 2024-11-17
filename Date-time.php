@@ -2,6 +2,11 @@
 <html>
 <head>
     <title>Last Visited Page</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 

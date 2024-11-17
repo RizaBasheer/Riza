@@ -21,52 +21,61 @@
         </style>
     </head>
     <body>
-        <h2>Enter Your Bio Data</h2>
-        <form action="Biodata.php" method="POST">
-            <table>
-                <tr>
-                    <th>Name:</th>
-                    <td><input type="text" id="name" name="name" required></td>
-                </tr>
-                <tr>
-                    <th>Age:</th>
-                    <td><input type="number" id="age" name="age" required></td>
-                </tr>
-                <tr>
-                    <th>Date Of Birth:</th>
-                    <td><input type="date" id="dob" name="dob" required></td>
-                </tr>
-                <tr>
-                    <th>Father's Name:</th>
-                    <td><input type="text" id="fname" name="fname" required></td>
-                </tr>
-                <tr>
-                    <th>Mother's Name:</th>
-                    <td><input type="text" id="mname" name="mname" required></td>
-                </tr>
-                <tr>
-                    <th>Email:</th>
-                    <td><input type="email" id="email" name="email" required></td>
-                </tr>
-                <tr>
-                    <th>Address:</th>
-                    <td><textarea id="address" name="address" required></textarea></td>
-                </tr>
-                <tr>
-                    <th>Hobby:</th>
-                    <td><input type="text" id="hobby" name="hobby" required></td>
-                </tr>
-                <tr>
-                    <th>Qualifications:</th>
-                    <td><textarea id="qualification" name="qualification" required></textarea></td>
-                </tr>
-                <tr>
-                    <th>Experience:</th>
-                    <td><textarea id="experience" name="experience" required></textarea></td>
-                </tr>
-            </table>
-            <br>
-            <button type="submit">Submit</button>
-        </form>
+       
+            <h2>Enter Your Bio Data</h2>
+            <form action="Biodata.php" method="POST">
+                <table>
+                    <tr>
+                        <th>Name:</th>
+                        <td><input type="text" id="name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <th>Age:</th>
+                        <td><input type="number" id="age" name="age" required></td>
+                    </tr>
+                    <tr>
+                        <th>Gender:</th>
+                        <td>
+                            <input type="radio" id="male" name="gender" value="Male" required> Male
+                            <input type="radio" id="female" name="gender" value="Female" required> Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Date Of Birth:</th>
+                        <td><input type="date" id="dob" name="dob" required></td>
+                    </tr>
+                    <tr>
+                        <th>Father's Name:</th>
+                        <td><input type="text" id="fname" name="fname" required></td>
+                    </tr>
+                    <tr>
+                        <th>Mother's Name:</th>
+                        <td><input type="text" id="mname" name="mname" required></td>
+                    </tr>
+                    <tr>
+                        <th>Email:</th>
+                        <td><input type="email" id="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <th>Address:</th>
+                        <td><textarea id="address" name="address" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <th>Hobby:</th>
+                        <td><input type="text" id="hobby" name="hobby" required></td>
+                    </tr>
+                    <tr>
+                        <th>Qualifications:</th>
+                        <td><textarea id="qualification" name="qualification" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <th>Experience:</th>
+                        <td><textarea id="experience" name="experience"></textarea></td>
+                    </tr>
+                    
+                </table>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
     </body>
 </html>
