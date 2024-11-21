@@ -67,7 +67,7 @@
                 if ($searchTerm !== "") {
                     $position = array_search($searchTerm, $names, true);
                     if ($position !== false) {
-                        echo "Position of '{$searchTerm}': " . $position;
+                        echo "Position of '{$searchTerm}': " . $position+1;
                     } else {
                         echo "'{$searchTerm}' not found in the array.";
                     }

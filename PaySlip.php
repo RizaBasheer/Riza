@@ -40,7 +40,7 @@ if ($_POST) {
     $net = $gross - $inc_tax;
 
     // Output the Payslip in Table format, center-aligned
-    echo "<br><h1 style='text-align: center;'>Pay Slip</h1>";
+    echo "<br><h1 style='text-align: center;  padding: 10px;'>Pay Slip</h1>";
     echo "<table border='1' style='border-collapse: collapse; width: 50%; margin: 0 auto;'>";
     echo "<tr><th colspan='2' style='text-align: center;'>Payslip Details</th></tr>";
     echo "<tr><td><strong>Name</strong></td><td>" . $name . "</td></tr>";
