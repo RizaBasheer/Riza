@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
     <title>Multiplication Table</title>
     <style>
@@ -9,35 +9,35 @@
     </style>
 </head>
 <body>
-
-    <h1>Multiplication Table</h1>
+    <h1>Multiplication Table </h1>
+    Enter the number: <input type="text" id="num"><br><br>
+    Enter the limit: <input type="text" id="limit"><br><br>
+    <button onclick="multiply()">Submit</button><br>
+    <div id="result"></div>
     
-    <label>Enter a number: </label>
-    <input type="number" id="num" min="1">
-    <button onclick="generateTable()">Generate Table</button>
-
-    <div id="tableContainer"></div> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <script>
-        function generateTable() {
+        function multiply() {
             var num = document.getElementById("num").value;
+            var limit = document.getElementById("limit").value;
             
-            if (!num) {
-                alert("Please enter a number.");
+            // Ensure limit is a valid number
+            if (!num || !limit || isNaN(num) || isNaN(limit)) {
+                alert("Please enter valid numbers.");
                 return;
             }
 
-            $.ajax({
-                url: "Generate_table.php",
-                type: "GET",
-                data: { num: num },
-                success: function(response) {
-                    document.getElementById("tableContainer").innerHTML = response;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("result").innerHTML = this.responseText;
                 }
-            });
+            };
+
+            // Send both number and limit to the server
+            xmlhttp.open("POST", "multiplication.php", true);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.send("number=" + num + "&limit=" + limit);  // Pass both parameters
         }
     </script>
-
 </body>
 </html>

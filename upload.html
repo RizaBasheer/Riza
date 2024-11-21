@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload File</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Upload File</h2>
+
+    <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <label for="fileToUpload">Choose file to upload:</label>
+        <input type="file" name="fileToUpload" id="fileToUpload" required>
+        <br><br>
+        <input type="submit" value="Upload File">
+    </form>
+</body>
+</html>
